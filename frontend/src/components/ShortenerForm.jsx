@@ -80,11 +80,11 @@ export default function ShortenerForm() {
       </form>
 
       {shortUrl && (
-      <motion.div
+  <motion.div
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.6 }}
-  className="relative z-10 mt-8 flex flex-wrap sm:flex-nowrap flex-col sm:flex-row items-center justify-between gap-4 rounded-xl border border-pink-400 bg-gray-800 px-4 py-4 shadow-lg"
+  className="relative z-10 mt-8 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-pink-400 bg-gray-800 px-4 py-4 shadow-lg w-full"
 >
   <ExternalLink className="h-6 w-6 text-pink-400 flex-shrink-0" />
 
@@ -92,7 +92,8 @@ export default function ShortenerForm() {
     href={shortUrl}
     target="_blank"
     rel="noopener noreferrer"
-    className="flex-grow min-w-0 break-words text-pink-400 font-medium hover:underline"
+    className="flex-grow min-w-0 max-w-full break-words overflow-wrap-anywhere text-pink-400 font-medium hover:underline"
+    style={{ maxWidth: "calc(100% - 64px)" }} // leaves space for button + icon approx
   >
     {shortUrl}
   </a>
@@ -105,6 +106,7 @@ export default function ShortenerForm() {
     {copied ? <CheckCircle2 className="h-6 w-6" /> : <Copy className="h-6 w-6" />}
   </button>
 </motion.div>
+
 
       )}
     </motion.div>
