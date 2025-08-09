@@ -1,0 +1,12 @@
+import ExploreSection from "../components/ExploreSection";
+import Header from "../components/Header";
+
+
+export default function Home() {
+  return (
+    <div>
+      <Header/>
+      <ExploreSection/>
+    </div>
+  );
+}
