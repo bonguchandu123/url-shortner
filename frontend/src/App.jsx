@@ -9,10 +9,10 @@ import Footer from "./components/Footer";
 export default function App() {
   return (
     <Router>
-      {/* Navbar stays persistent on all pages */}
+ 
       <Navbar />  
 
-      {/* Your pages will render here based on URL */}
+     
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shorten" element={<ShortenPage />} />

@@ -7,7 +7,7 @@ export default function ListPage() {
   const [loading, setLoading] = useState(true);
   const [deletingId, setDeletingId] = useState(null);
 
-  const backendUrl = import.meta.env.REACT_APP_BACKEND_URL || "http://localhost:3000";
+  const backendUrl = import.meta.env.VITE_BACKEND_URL
 
   useEffect(() => {
     fetchUrls();

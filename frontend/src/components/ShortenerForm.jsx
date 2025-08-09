@@ -9,7 +9,7 @@ export default function ShortenerForm() {
   const [loading, setLoading] = useState(false);
   const [copied, setCopied] = useState(false);
 
-  const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000";
+  const backendUrl = import.meta.env.VITE_BACKEND_URL
 
 
   const handleSubmit = async (e) => {

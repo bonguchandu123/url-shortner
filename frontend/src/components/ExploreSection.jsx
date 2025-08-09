@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRightCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function ExploreSection() {
   return (
@@ -23,12 +24,12 @@ export default function ExploreSection() {
           Click below to start shortening your first link now.
         </p>
 
-        <a href="/shorten" className="inline-block">
+        <Link href="/shorten" className="inline-block">
           <button className="mt-8 inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl hover:from-purple-600 hover:to-blue-600 transition-all duration-300 shadow-lg">
             Get Started
             <ArrowRightCircle className="w-5 h-5" />
           </button>
-        </a>
+        </Link>
       </motion.div>
     </section>
   );
