@@ -80,31 +80,32 @@ export default function ShortenerForm() {
       </form>
 
       {shortUrl && (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="relative z-10 mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-xl border border-pink-400 bg-gray-800 px-4 py-4 shadow-lg"
-        >
-          <ExternalLink className="h-6 w-6 text-pink-400" />
+      <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  className="relative z-10 mt-8 flex flex-wrap sm:flex-nowrap flex-col sm:flex-row items-center justify-between gap-4 rounded-xl border border-pink-400 bg-gray-800 px-4 py-4 shadow-lg"
+>
+  <ExternalLink className="h-6 w-6 text-pink-400 flex-shrink-0" />
 
-          <a
-            href={shortUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="max-w-full break-words text-pink-400 font-medium hover:underline"
-          >
-            {shortUrl}
-          </a>
+  <a
+    href={shortUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex-grow min-w-0 break-words text-pink-400 font-medium hover:underline"
+  >
+    {shortUrl}
+  </a>
 
-          <button
-            onClick={handleCopy}
-            aria-label="Copy short URL"
-            className="rounded-full p-2 text-gray-300 hover:bg-pink-600 hover:text-white transition"
-          >
-            {copied ? <CheckCircle2 className="h-6 w-6" /> : <Copy className="h-6 w-6" />}
-          </button>
-        </motion.div>
+  <button
+    onClick={handleCopy}
+    aria-label="Copy short URL"
+    className="rounded-full p-2 text-gray-300 hover:bg-pink-600 hover:text-white transition flex-shrink-0"
+  >
+    {copied ? <CheckCircle2 className="h-6 w-6" /> : <Copy className="h-6 w-6" />}
+  </button>
+</motion.div>
+
       )}
     </motion.div>
   );
