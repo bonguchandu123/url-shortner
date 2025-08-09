@@ -9,8 +9,7 @@ export default function ShortenerForm() {
   const [loading, setLoading] = useState(false);
   const [copied, setCopied] = useState(false);
 
-  const backendUrl = import.meta.env.VITE_BACKEND_URL
-
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -47,7 +46,7 @@ export default function ShortenerForm() {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="relative max-w-xl mx-auto p-8 rounded-3xl bg-gray-900/80 border border-gray-700 shadow-lg overflow-hidden"
+      className="relative max-w-xl mx-auto p-4 sm:p-8 rounded-3xl bg-gray-900/80 border border-gray-700 shadow-lg overflow-hidden"
     >
       {/* Gradient Glow Background */}
       <div
@@ -59,7 +58,7 @@ export default function ShortenerForm() {
         className="absolute inset-0 -z-20 rounded-3xl bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 opacity-90"
       />
 
-      <form onSubmit={handleSubmit} className="relative z-10 flex flex-col gap-6">
+      <form onSubmit={handleSubmit} className="relative z-10 flex flex-col gap-4 sm:gap-6">
         <label className="text-white text-xl font-semibold tracking-wide">
           Enter your long URL:
         </label>
@@ -85,7 +84,7 @@ export default function ShortenerForm() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="relative z-10 mt-8 flex items-center justify-between gap-4 rounded-xl border border-pink-400 bg-gray-800 px-6 py-4 shadow-lg"
+          className="relative z-10 mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-xl border border-pink-400 bg-gray-800 px-4 py-4 shadow-lg"
         >
           <ExternalLink className="h-6 w-6 text-pink-400" />
 
@@ -103,11 +102,7 @@ export default function ShortenerForm() {
             aria-label="Copy short URL"
             className="rounded-full p-2 text-gray-300 hover:bg-pink-600 hover:text-white transition"
           >
-            {copied ? (
-              <CheckCircle2 className="h-6 w-6" />
-            ) : (
-              <Copy className="h-6 w-6" />
-            )}
+            {copied ? <CheckCircle2 className="h-6 w-6" /> : <Copy className="h-6 w-6" />}
           </button>
         </motion.div>
       )}
