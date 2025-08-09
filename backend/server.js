@@ -28,6 +28,9 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.get('/', (req, res) => {
   res.send('Welcome to the URL Shortener API');
 });
+console.log('BASE_URL:', process.env.BASE_URL);
+
+
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
