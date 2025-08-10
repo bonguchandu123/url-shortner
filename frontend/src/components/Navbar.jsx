@@ -40,14 +40,13 @@ export default function Navbar() {
             </div>
           </Link>
 
-          {/* Desktop Links */}
           <div className="hidden sm:!flex items-center gap-6 z-10">
             <NavLink to="/" label="Home" icon={<Home className="w-4 h-4" />} />
             <NavLink to="/shorten" label="Shorten" icon={<Scissors className="w-4 h-4" />} />
             <NavLink to="/list" label="List" icon={<List className="w-4 h-4" />} />
           </div>
 
-          {/* Mobile Menu Button */}
+
           <div className="sm:hidden z-20">
             <button onClick={() => setIsOpen(!isOpen)} className="p-2 rounded-md hover:bg-white/5">
               {isOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}

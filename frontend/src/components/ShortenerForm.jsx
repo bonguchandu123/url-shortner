@@ -48,7 +48,6 @@ export default function ShortenerForm() {
       transition={{ duration: 0.8 }}
       className="relative max-w-xl mx-auto p-4 sm:p-8 rounded-3xl bg-gray-900/80 border border-gray-700 shadow-lg overflow-hidden"
     >
-      {/* Gradient Glow Background */}
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-10 rounded-3xl bg-gradient-to-tr from-indigo-500 via-purple-700 to-pink-600 opacity-60 blur-3xl"
@@ -93,8 +92,9 @@ export default function ShortenerForm() {
     target="_blank"
     rel="noopener noreferrer"
     className="flex-grow min-w-0 max-w-full break-words overflow-wrap-anywhere text-pink-400 font-medium hover:underline"
-    style={{ maxWidth: "calc(100% - 64px)" }} // leaves space for button + icon approx
+    style={{ maxWidth: "calc(100% - 64px)" }} 
   >
+
     {shortUrl}
   </a>
 
@@ -106,6 +106,7 @@ export default function ShortenerForm() {
     {copied ? <CheckCircle2 className="h-6 w-6" /> : <Copy className="h-6 w-6" />}
   </button>
 </motion.div>
+
 
 
       )}
