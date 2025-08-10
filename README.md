@@ -5,6 +5,11 @@ It allows users to shorten long URLs and optionally track the number of visits t
 
 ---
 
+## 📹 Demo Video
+🎥 Click here to watch the project demo on Google Drive
+
+
+
 ## 🚀 Live Demo
 [Click here to visit the live app](https://url-shortner-vjeq.vercel.app/)
 
